@@ -35,23 +35,92 @@
             <ul class="nav-list">
               <li><a href="index.html">Home</a></li>
               <li class="active"><a href="service.html">Service</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li>
+                <a href="portfolio.html"
+                  >Portfolio
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="drop-down">
+                  <ul class="drop-content">
+                    <li><a href="">Portfolio 1</a></li>
+                    <li><a href="">Portfolio 1</a></li>
+                    <li><a href="">Portfolio 1</a></li>
+                  </ul>
+                </div>
+              </li>
               <li><a href="pricing.html">Pricing</a></li>
-
-              <div class="drop-down">
+              <li>
                 <a href="about.html"
                   >About us
                   <i class="fa-solid fa-angle-down"></i>
                 </a>
-
-                <div class="drop-content">
-                  <li>About1</li>
-                  <li>About1</li>
-                  <li>About1</li>
+                <div class="drop-down">
+                  <ul class="drop-content">
+                    <li><a href="">About1</a></li>
+                    <li><a href="">About1</a></li>
+                    <li><a href="">About1</a></li>
+                  </ul>
                 </div>
-              </div>
+              </li>
+
               <a href="" class="btn btn-primary">Talk to us</a>
             </ul>
+          </nav>
+          <nav role="navigation" class="mobile-nav">
+            <div id="menuToggle">
+              <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+              <input type="checkbox" />
+
+              <!--
+                Some spans to act as a hamburger.
+        
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+              <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li class="">
+                  <div tabindex="0" class="onclick-menu">
+                    <div>
+                      <a href="portfolio.html">Portfolio</a>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="onclick-menu-content">
+                      <li><a href="#">Sub-1</a></li>
+                      <li><a href="#">Sub-2</a></li>
+                      <li><a href="#">Sub-3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li class="">
+                  <div tabindex="0" class="onclick-menu">
+                    <div>
+                      <a href="about.html">About Us</a>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="onclick-menu-content">
+                      <li><a href="#">Sub-1</a></li>
+                      <li><a href="#">Sub-2</a></li>
+                      <li><a href="#">Sub-3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
           </nav>
         </div>
       </header>
