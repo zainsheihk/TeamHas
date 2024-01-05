@@ -3,25 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@800&display=swap"
       rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap"
-      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>TeamHas</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Team Has</title>
   </head>
 
   <body>
@@ -152,35 +144,37 @@
     <main class="portfolio-page">
       <div class="our-portfolio" id="gradient-bg">
         <div class="container">
-          <h1><span class="heading-gradient">portfolio</span></h1>
+          <h1 data-aos="fade-up">
+            <span class="heading-gradient">portfolio</span>
+          </h1>
 
           <div class="card-wrapper">
-            <div class="port-card">
+            <div class="port-card" data-aos="fade-up">
               <img src="imgs/port1.png" alt="" />
               <h2>Lorem ispum</h2>
             </div>
 
-            <div class="port-card">
+            <div class="port-card" data-aos="fade-up">
               <img src="imgs/port2.png" alt="" />
               <h2>Lorem ispum</h2>
             </div>
 
-            <div class="port-card">
+            <div class="port-card" data-aos="fade-up">
               <img src="imgs/port3.png" alt="" />
               <h2>Lorem ispum</h2>
             </div>
 
-            <div class="port-card">
+            <div class="port-card" data-aos="fade-up">
               <img src="imgs/port4.png" alt="" />
               <h2>Lorem ispum</h2>
             </div>
 
-            <div class="port-card">
+            <div class="port-card" data-aos="fade-up">
               <img src="imgs/port5.png" alt="" />
               <h2>Lorem ispum</h2>
             </div>
 
-            <div class="port-card">
+            <div class="port-card" data-aos="fade-up">
               <img src="imgs/port6.png" alt="" />
               <h2>Lorem ispum</h2>
             </div>
@@ -192,11 +186,13 @@
       <div class="container">
         <div class="wrapper">
           <div class="left">
-            <a href="index.html">
+            <a href="index.html" data-aos="fade-left">
               <img class="logo" src="imgs/logo.png" alt=""
             /></a>
-            <p>I know you think <br />WHO WE ARE AND HOW WE WORK?</p>
-            <ul>
+            <p data-aos="fade-left">
+              I know you think <br />WHO WE ARE AND HOW WE WORK?
+            </p>
+            <ul data-aos-duration="1000" data-aos="fade-left">
               <li>
                 <a href="#">
                   <i class="fa-regular fa-envelope"></i> info@TeamHas.com</a
@@ -208,7 +204,7 @@
                 >
               </li>
             </ul>
-            <div class="social">
+            <div class="social" data-aos="fade-down">
               <a class="social-icon" href="#"
                 ><img src="imgs/twitter 1.png" alt=""
               /></a>
@@ -222,7 +218,7 @@
           </div>
 
           <div class="right">
-            <div class="home">
+            <div class="home" data-aos="fade-up">
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="service.html">Services</a></li>
@@ -232,7 +228,7 @@
                 <li><a href="pricing.html">Pricing</a></li>
               </ul>
             </div>
-            <div class="contact">
+            <div class="contact" data-aos="fade-up">
               <ul>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
@@ -242,7 +238,7 @@
                 </li>
               </ul>
             </div>
-            <div class="ser">
+            <div class="ser" data-aos="fade-up">
               <ul>
                 <li><a href="/html/service.html">Services</a></li>
                 <li>
@@ -255,7 +251,7 @@
             </div>
           </div>
         </div>
-        <div class="bottom-bar">
+        <div class="bottom-bar" data-aos-duration="1000" data-aos="fade-right">
           <p>All rights reserved.All prices are in USD</p>
           <ul>
             <li><a href="/html/service.html">terms</a></li>
@@ -267,7 +263,9 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="js/script.js"></script>
   </body>
 </html>
