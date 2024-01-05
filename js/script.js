@@ -1,6 +1,7 @@
+AOS.init();
 var acc = document.getElementsByClassName("accordion-header");
 var i;
-console.log(acc);
+
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
@@ -17,3 +18,128 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+var swiper = new Swiper(".brands-slider", {
+  slidesPerView: 5,
+  autoplay: {
+    delay: 2000,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 60,
+    },
+    420: {
+      slidesPerView: 3,
+      spaceBetween: 60,
+    },
+    // when window width is >= 480px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 80,
+    },
+    // when window width is >= 640px
+    1040: {
+      slidesPerView: 5,
+      spaceBetween: 100,
+    },
+  },
+  loop: true,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+var swiper2 = new Swiper(".brands-slider-2", {
+  slidesPerView: 5,
+  autoplay: {
+    delay: 1500,
+    reverseDirection: true,
+  },
+
+  loop: true,
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 60,
+    },
+    420: {
+      slidesPerView: 3,
+      spaceBetween: 60,
+    },
+    // when window width is >= 480px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 80,
+    },
+    // when window width is >= 640px
+    1040: {
+      slidesPerView: 5,
+      spaceBetween: 100,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+var swiper3 = new Swiper(".client-slider", {
+  autoplay: {
+    delay: 1500,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    560: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    860: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    // when window width is >= 640px
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+var swiper3 = new Swiper(".team-slider", {
+  autoplay: {
+    delay: 1500,
+  },
+  centeredSlides: true,
+  roundLengths: true,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    560: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 480px
+    1040: {
+      slidesPerView: 5,
+    },
+    // when window width is >= 640px
+  },
+  loop: true,
+  navigation: {
+    nextEl: ".team-slider-next",
+    prevEl: ".team-slider-prev",
+  },
+});

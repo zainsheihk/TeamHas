@@ -38,10 +38,16 @@ body {
     padding: 0%;
 }
 
+main {
+    width: 100%;
+
+}
+
 .container {
     max-width: 1200px;
     width: 90%;
     margin-inline: auto;
+    overflow: hidden;
 }
 
 /* bottons*/
@@ -60,6 +66,7 @@ body {
 .btn.btn-primary {
     background: linear-gradient(140.77deg, #FC00FF 15.29%, #00DBDE 95.88%);
     color: #fff;
+
 }
 
 .btn.btn-primary:hover {
@@ -198,7 +205,7 @@ header .container {
 
 
 
-.nav-list li.active ::before,
+.nav-list li.active::before,
 .nav-list li::before {
     transition: all 0.3s ease-in-out;
     content: "";
@@ -536,23 +543,15 @@ header .container {
     margin-top: 0;
 }
 
+.brands-slider {
+    margin: 20px;
+}
 
-.brands swiper-container {
+.brands-slider .swiper-slide img,
+.brands-slider-2 .swiper-slide img {
     width: 100%;
-    padding: 10px 0px;
-
 }
 
-
-.brands swiper-slide {
-    padding-top: 20px;
-}
-
-.brands swiper-slide img {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-}
 
 
 
@@ -649,16 +648,76 @@ header .container {
 }
 
 .team-member {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
     padding-top: 50px;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
 }
 
 .team-member img {
     padding: 10px;
+    width: 100%;
 }
+
+.team-member .swiper-slide {
+    transform: scale(0.6) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.team-member .swiper-slide.swiper-slide-active {
+
+    transform: scale(1.1) !important;
+}
+
+.team-member .swiper-slide.swiper-slide-prev {
+    margin-right: 15px;
+}
+
+.team-member .swiper-slide.swiper-slide-next {
+    margin-left: 15px;
+}
+
+.team-member .swiper-slide.swiper-slide-prev,
+.team-member .swiper-slide.swiper-slide-next {
+
+    transform: scale(0.8) !important;
+}
+
+.swiper-button {
+    cursor: pointer;
+    z-index: 9999;
+    padding: 10px 15px;
+    border-radius: 2px;
+    border: none;
+    border: 2px solid transparent;
+    background: linear-gradient(#0c0c0c, #0c0c0c) padding-box,
+        linear-gradient(140.77deg, #FC00FF 15.29%, #00DBDE 95.88%) border-box;
+}
+
+.swiper-button .fa-solid {
+    color: #ccc6;
+    font-size: 20px;
+
+}
+
+.team-slider-prev {
+    position: absolute;
+    bottom: 0;
+    left: -15%;
+    transform: translateY(-110%);
+}
+
+.team-slider-next {
+    position: absolute;
+    bottom: 0;
+    right: -15%;
+    transform: translateY(-110%);
+}
+
 
 
 /* our-plans */
@@ -801,8 +860,8 @@ header .container {
 }
 
 .feed-backs .card-wrapper {
-    display: flex;
-    justify-content: space-between;
+
+    padding-top: 15px;
 }
 
 .rating-wrapper {
@@ -820,7 +879,7 @@ header .container {
 
 
 .client-card {
-    width: 32%;
+    /* width: 32%; */
     background-color: #161616;
     border-radius: 10px;
     padding: 40px 40px 50px 40px;
@@ -989,6 +1048,11 @@ footer .social {
 footer .social .social-icon {
     width: 25px;
     height: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .social .social-icon:hover {
+    transform: scale(1.2);
 }
 
 footer .right {
@@ -1021,6 +1085,24 @@ footer .right ul li a {
     font-size: 17px;
     text-decoration: none;
     text-transform: capitalize;
+    position: relative;
+}
+
+footer .right ul li a::before,
+footer .bottom-bar ul a::before {
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #FC00FF;
+}
+
+footer .right ul li a:hover::before,
+footer .bottom-bar ul a:hover::before {
+    width: 100%;
 }
 
 footer .bottom-bar {
@@ -1048,11 +1130,24 @@ footer .bottom-bar ul a {
     text-transform: capitalize;
     text-decoration: none;
     font-size: 13px;
+    position: relative;
 }
 
 @media screen and (max-width: 1040px) {
     .banner .main-heading {
         width: 100%;
+    }
+
+    .swiper-button {
+        display: none;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+
+    .nav-list {
+        gap: 15px;
     }
 
     h1 {
@@ -1096,6 +1191,10 @@ footer .bottom-bar ul a {
         display: none;
     }
 
+    .circle-container {
+        display: none;
+    }
+
     .mobile-nav {
         display: block;
         margin-top: 15px;
@@ -1136,14 +1235,12 @@ footer .bottom-bar ul a {
 }
 
 @media screen and (max-width: 700px) {
-    .card-wrapper {
+    .our-plans .card-wrapper {
         flex-wrap: wrap;
         gap: 30px;
     }
 
-    .client-card {
-        width: 100%;
-    }
+
 
     .port-card {
         width: 80%;
@@ -1154,10 +1251,7 @@ footer .bottom-bar ul a {
         width: 100%;
     }
 
-    .team-member img:nth-child(1),
-    .team-member img:nth-child(5) {
-        display: none;
-    }
+
 
     .banner .heading-ellipse {
         width: 150px;
@@ -1300,6 +1394,20 @@ footer .bottom-bar ul a {
 
 }
 
+@media screen and (max-width: 480px) {
+    .team-member img {
+        width: 70%;
+    }
+
+    .team-member .swiper-slide.swiper-slide-prev {
+        margin-right: 0px;
+    }
+
+    .team-member .swiper-slide.swiper-slide-next {
+        margin-left: 0px;
+    }
+}
+
 @media screen and (max-width: 640px) {
     .service-card {
         width: 90%;
@@ -1309,6 +1417,8 @@ footer .bottom-bar ul a {
     .services-wrapper {
         padding: 20px 0 40px 0;
     }
+
+
 }
 
 /* PRICING */
@@ -1556,6 +1666,11 @@ footer .bottom-bar ul a {
 @media screen and (max-width: 600px) {
     .pricing-page .main-content h1 {
         font-size: 36px;
+    }
+
+    .team-member .swiper-slide.swiper-slide-active {
+
+        transform: scale(1) !important;
     }
 
     .pricing-page .included-plan h2 {
