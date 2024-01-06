@@ -1352,6 +1352,13 @@ footer .bottom-bar ul a {
     padding: 40px 50px 50px 50px;
 }
 
+.service-card b {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: block;
+}
+
 .service-card:hover {
     background-image: linear-gradient(to bottom right, #bb2ec0 20%, #07adee 90%);
 }
@@ -1946,6 +1953,10 @@ footer .bottom-bar ul a {
     position: relative;
 }
 
+.career-page .open-position .left {
+    width: 65%;
+}
+
 .career-page .open-position .left p:nth-of-type(1) {
     margin: 0;
     font-size: 26px;
@@ -2010,6 +2021,10 @@ footer .bottom-bar ul a {
     }
 
     .career-page .open-position .left h2 {
+        width: 100%;
+    }
+
+    .career-page .open-position .left {
         width: 100%;
     }
 }
@@ -2124,6 +2139,7 @@ footer .bottom-bar ul a {
 }
 
 .form-control {
+    color: #fff;
     font-family: "urbanist", sans-serif;
     background-color: #000;
     padding: 25px 20px;
@@ -2196,6 +2212,91 @@ footer .bottom-bar ul a {
 @media screen and (max-width:480px) {
 
     .contact-page .contact-form .btn {
+        width: 100%;
+    }
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 5;
+    /* Sit on top */
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* Black w/ opacity */
+}
+
+
+
+/* Modal Content/Box */
+.modal-content {
+
+    background-color: #0c0c0c;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal h2 {
+    font-size: 24px;
+
+}
+
+.modal .form-control {
+    padding: 20px 15px;
+
+}
+
+.modal .form-control::placeholder {
+    font-size: 15px;
+}
+
+.modal .btn {
+    margin-left: auto;
+    display: block;
+    width: fit-content;
+    outline: none;
+    border: none;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .modal-content {
         width: 100%;
     }
 }
