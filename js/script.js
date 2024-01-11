@@ -21,8 +21,10 @@ for (i = 0; i < acc.length; i++) {
 
 var swiper = new Swiper(".brands-slider", {
   slidesPerView: 5,
+  speed: 8000,
   autoplay: {
-    delay: 2000,
+    delay: 1,
+    disableOnInteraction: false,
   },
   breakpoints: {
     // when window width is >= 320px
@@ -54,8 +56,10 @@ var swiper = new Swiper(".brands-slider", {
 });
 var swiper2 = new Swiper(".brands-slider-2", {
   slidesPerView: 5,
+  speed: 8000,
   autoplay: {
-    delay: 1500,
+    delay: 1,
+    disableOnInteraction: false,
     reverseDirection: true,
   },
 
